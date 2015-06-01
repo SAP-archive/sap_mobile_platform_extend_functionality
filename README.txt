@@ -1,5 +1,5 @@
 ﻿Readme of How to use SMP3 sample code. 
-SCN link: http://scn.sap.com/docs/DOC-61703
+SCN: http://scn.sap.com/docs/DOC-61703
 
 1. Download sample source code 
 			https://github.com/SAP/sap_mobile_platform_extend_functionality
