@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+  <bean id="seccheck" class="com.sap.mobile.platform.server.dispatcher.samplefilter.Filter1" />
+  <bean id="noauthfilter" class="com.sap.mobile.platform.server.dispatcher.samplefilter.Filter1" />
+
+  <bean id="noslash" class="com.sap.mobile.platform.server.dispatcher.samplefilter.Filter1" /> 
+  <bean id="slash" class="com.sap.mobile.platform.server.dispatcher.samplefilter.Filter1" /> 
+  <bean id="slashstar" class="com.sap.mobile.platform.server.dispatcher.samplefilter.Filter1" /> 
+  <bean id="slashstarstar" class="com.sap.mobile.platform.server.dispatcher.samplefilter.Filter1" /> 
+
+</beans>

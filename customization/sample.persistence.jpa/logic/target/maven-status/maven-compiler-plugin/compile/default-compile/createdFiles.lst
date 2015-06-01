@@ -1,0 +1,3 @@
+com\sap\mobile\platform\server\sample\persistence\jpa\logic\api\MyCompanyException.class
+com\sap\mobile\platform\server\sample\persistence\jpa\logic\MyCompanyLogic.class
+com\sap\mobile\platform\server\sample\persistence\jpa\logic\api\IMyCompanyLogic.class

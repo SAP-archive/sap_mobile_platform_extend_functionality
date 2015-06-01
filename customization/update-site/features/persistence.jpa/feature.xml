@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.sap.mobile.platform.server.sample.customization.persistence.jpa.feature"
+      version="130.8.0.qualifier"
+      label="SAP Mobile Platform :: Server Samples :: Persistence - JPA - Eclipse P2 Feature"
+      provider-name="SAP AG">
+   
+  <copyright>
+	(c) 2013 SAP AG or an SAP affiliate company.  All rights reserved.
+  	
+	No part of this publication may be reproduced or transmitted in any form or for any purpose without the express permission of SAP AG.  The information contained herein may be changed without prior notice.
+  </copyright>
+   
+  <plugin id="com.sap.mobile.platform.server.sample.customization.persistence.jpa.model" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+  <plugin id="com.sap.mobile.platform.server.sample.customization.persistence.jpa.dao-api" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+  <plugin id="com.sap.mobile.platform.server.sample.customization.persistence.jpa.dao-impl-eclipselink" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+  <plugin id="com.sap.mobile.platform.server.sample.customization.persistence.jpa.logic" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+  <plugin id="com.sap.mobile.platform.server.sample.customization.persistence.jpa.wab" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+  
+</feature>

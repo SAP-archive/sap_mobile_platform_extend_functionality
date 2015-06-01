@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1433125851950
+Build-Jdk: 1.7.0_25
+Built-By: I066721
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Mobile Platform :: Server Samples :: Persistence - JPA 
+ - DAO API
+Bundle-SymbolicName: com.sap.mobile.platform.server.sample.customization
+ .persistence.jpa.dao-api
+Bundle-Version: 130.8.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.sap.mobile.platform.server.sample.persistence.jpa.da
+ o.api;uses:="com.sap.mobile.platform.server.sample.persistence.jpa.mode
+ l";version="130.8.0.SNAPSHOT"
+Import-Package: com.sap.mobile.platform.server.sample.persistence.jpa.mo
+ del;version="[130.8,131)",javax.persistence;version="[2.0,3)"
+Tool: Bnd-1.50.0

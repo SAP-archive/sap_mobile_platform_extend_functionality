@@ -1,0 +1,3 @@
+com\sap\mobile\platform\server\sample\persistence\jpa\dao\api\EmployeeDao.class
+com\sap\mobile\platform\server\sample\persistence\jpa\dao\api\BaseDao.class
+com\sap\mobile\platform\server\sample\persistence\jpa\dao\api\DepartmentDao.class

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='3'>
+  <unit id='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature.feature.group' version='130.8.0.201506010231' singleton='false'>
+    <update id='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature.feature.group' range='[0.0.0,130.8.0.201506010231)' severity='0'/>
+    <properties size='6'>
+      <property name='org.eclipse.equinox.p2.name' value='SAP Mobile Platform :: Server Samples :: Dispatcher Servlet Sample Filter Feature'/>
+      <property name='org.eclipse.equinox.p2.provider' value='SAP AG'/>
+      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      <property name='maven-groupId' value='com.sap.mobile.platform.server.sample'/>
+      <property name='maven-artifactId' value='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature'/>
+      <property name='maven-version' value='130.8.0-SNAPSHOT'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature.feature.group' version='130.8.0.201506010231'/>
+    </provides>
+    <requires size='3'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature.feature.jar' range='[130.8.0.201506010231,130.8.0.201506010231]'>
+        <filter>
+          (org.eclipse.update.install.features=true)
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.dispatcher.samplefilter' range='[130.8.0.SNAPSHOT,130.8.0.SNAPSHOT]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='configure.com.sap.mobile.platform.server.sample.customization.dispatcher.samplefilter' range='[130.8.0.201506010231,130.8.0.201506010231]'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+    <touchpointData size='1'/>
+    <copyright>
+      (c) 2013 SAP AG or an SAP affiliate company.  All rights reserved.&#xA;  &#x9;&#xA;&#x9;No part of this publication may be reproduced or transmitted in any form or for any purpose without the express permission of SAP AG.  The information contained herein may be changed without prior notice.
+    </copyright>
+  </unit>
+  <unit id='configure.com.sap.mobile.platform.server.sample.customization.dispatcher.samplefilter' version='130.8.0.201506010231' singleton='false'>
+    <hostRequirements size='2'>
+      <required namespace='osgi.bundle' name='com.sap.mobile.platform.server.sample.customization.dispatcher.samplefilter' range='0.0.0' greedy='false'/>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+    </hostRequirements>
+    <properties size='1'>
+      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='configure.com.sap.mobile.platform.server.sample.customization.dispatcher.samplefilter' version='130.8.0.201506010231'/>
+    </provides>
+    <requires size='2'>
+      <required namespace='osgi.bundle' name='com.sap.mobile.platform.server.sample.customization.dispatcher.samplefilter' range='0.0.0' greedy='false'/>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='4'>
+        <instruction key='install'>
+          org.eclipse.equinox.p2.touchpoint.eclipse.installBundle(bundle:${artifact});
+        </instruction>
+        <instruction key='uninstall'>
+          org.eclipse.equinox.p2.touchpoint.eclipse.uninstallBundle(bundle:${artifact});
+        </instruction>
+        <instruction key='unconfigure'>
+          org.eclipse.equinox.p2.touchpoint.eclipse.setStartLevel(startLevel:-1); org.eclipse.equinox.p2.touchpoint.eclipse.markStarted(started:false);
+        </instruction>
+        <instruction key='configure'>
+          org.eclipse.equinox.p2.touchpoint.eclipse.setStartLevel(startLevel:27); org.eclipse.equinox.p2.touchpoint.eclipse.markStarted(started:true);
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+  <unit id='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature.feature.jar' version='130.8.0.201506010231'>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='SAP Mobile Platform :: Server Samples :: Dispatcher Servlet Sample Filter Feature'/>
+      <property name='org.eclipse.equinox.p2.provider' value='SAP AG'/>
+      <property name='maven-groupId' value='com.sap.mobile.platform.server.sample'/>
+      <property name='maven-artifactId' value='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature'/>
+      <property name='maven-version' value='130.8.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature.feature.jar' version='130.8.0.201506010231'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+      <provided namespace='org.eclipse.update.feature' name='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature' version='130.8.0.201506010231'/>
+    </provides>
+    <filter>
+      (org.eclipse.update.install.features=true)
+    </filter>
+    <artifacts size='1'>
+      <artifact classifier='org.eclipse.update.feature' id='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature' version='130.8.0.201506010231'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='zipped'>
+          true
+        </instruction>
+      </instructions>
+    </touchpointData>
+    <copyright>
+      (c) 2013 SAP AG or an SAP affiliate company.  All rights reserved.&#xA;  &#x9;&#xA;&#x9;No part of this publication may be reproduced or transmitted in any form or for any purpose without the express permission of SAP AG.  The information contained herein may be changed without prior notice.
+    </copyright>
+  </unit>
+</units>

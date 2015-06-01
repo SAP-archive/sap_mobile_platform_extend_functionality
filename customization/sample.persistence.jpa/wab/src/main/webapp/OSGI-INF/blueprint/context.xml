@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+  <reference id="myCompanyLogic" interface="com.sap.mobile.platform.server.sample.persistence.jpa.logic.api.IMyCompanyLogic"
+    availability="mandatory" />
+ 
+  <bean id="blueprintAware" class="com.sap.mobile.platform.server.sample.persistence.jpa.servlet.context.BlueprintAware"/>
+
+</blueprint>

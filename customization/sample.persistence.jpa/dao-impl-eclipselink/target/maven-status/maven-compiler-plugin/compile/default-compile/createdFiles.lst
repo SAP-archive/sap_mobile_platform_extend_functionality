@@ -1,0 +1,3 @@
+com\sap\mobile\platform\server\sample\persistence\jpa\eclipselink\dao\impl\BaseDaoImpl.class
+com\sap\mobile\platform\server\sample\persistence\jpa\eclipselink\dao\impl\EmployeeDaoImpl.class
+com\sap\mobile\platform\server\sample\persistence\jpa\eclipselink\dao\impl\DepartmentDaoImpl.class

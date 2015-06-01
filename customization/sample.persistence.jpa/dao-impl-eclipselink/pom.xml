@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.sap.mobile.platform.server.sample</groupId>
+    <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa</artifactId>
+    <version>130.8.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.sap.mobile.platform.server.sample</groupId>
+  <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.dao-impl-eclipselink</artifactId>
+  <name>SAP Mobile Platform :: Server Samples :: Persistence - JPA - EclipseLink DAOs</name>
+  <packaging>bundle</packaging>
+
+  <properties>
+    <eclipselink.version>2.4.2</eclipselink.version>
+    <javax-persistence.version>2.0.4.v201112161009</javax-persistence.version>
+    <eclipselink-antlr.version>3.2.0.v201206041011</eclipselink-antlr.version>
+    <eclipselink-asm.version>3.3.1.v201206041142</eclipselink-asm.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <!-- Create an OSGi Bundle Manifest -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <manifestLocation>META-INF</manifestLocation>
+            <Bundle-Category>event</Bundle-Category>
+            <Bundle-Version>${project.version}</Bundle-Version>
+            <Bundle-Name>${project.name}</Bundle-Name>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Export-Package>
+            </Export-Package>
+            <Private-Package>
+              com.sap.mobile.platform.server.sample.persistence.jpa.eclipselink.log,
+              com.sap.mobile.platform.server.sample.persistence.jpa.eclipselink.dao.impl
+            </Private-Package>
+            <Import-Package>
+              com.sap.mobile.platform.server.sample.persistence.jpa.dao.api,
+              com.sap.mobile.platform.server.sample.persistence.jpa.model,
+              org.osgi.framework,
+              org.slf4j,
+              javax.annotation,
+              javax.persistence;version="[2.0,3)",
+              javax.persistence.spi;version="[2.0,3)",
+              javax.sql
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+	<dependency>
+		<groupId>org.eclipse.gemini</groupId>
+		<artifactId>org.eclipse.gemini.blueprint.core</artifactId>
+	</dependency>
+	<dependency>
+      <groupId>com.sap.mobile.platform.server.sample</groupId>
+      <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.model</artifactId>
+      <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>com.springsource.javax.persistence</artifactId>
+          <groupId>javax.persistence</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sap.mobile.platform.server.sample</groupId>
+      <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.dao-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>com.springsource.slf4j.api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.core</artifactId>
+      <version>${eclipselink.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>eclipselink</artifactId>
+      <version>${eclipselink.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>javax.persistence</artifactId>
+      <version>${javax-persistence.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.jpa</artifactId>
+      <version>${eclipselink.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+      <version>${eclipselink.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.asm</artifactId>
+      <version>${eclipselink-asm.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.antlr</artifactId>
+      <version>${eclipselink-antlr.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+</project>

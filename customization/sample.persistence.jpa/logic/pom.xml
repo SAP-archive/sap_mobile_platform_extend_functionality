@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.sap.mobile.platform.server.sample</groupId>
+    <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa</artifactId>
+    <version>130.8.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.sap.mobile.platform.server.sample</groupId>
+  <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.logic</artifactId>
+  <name>SAP Mobile Platform :: Server Samples :: Persistence - JPA - Logic Service</name>
+  <packaging>bundle</packaging>
+
+  <properties>
+
+    <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
+    <!-- workaround to use in resource filtering -->
+    <buildTimestamp>${maven.build.timestamp}</buildTimestamp>
+
+    <spring.version>3.1.4.RELEASE</spring.version>
+
+    <javax-persistence.version>2.0.4.v201112161009</javax-persistence.version>
+
+  </properties>
+
+  <build>
+    <plugins>
+          <!-- Create an OSGi Bundle Manifest -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <manifestLocation>META-INF</manifestLocation>
+               <Bundle-Category>event</Bundle-Category>
+               <Bundle-Version>${project.version}</Bundle-Version>
+               <Bundle-Name>${project.name}</Bundle-Name>
+               <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <!--
+             | Note: When you develop your own additional classes within this object bundle, include the package names of
+              the classes in either the Export-Package or the Private-Package, otherwise it will not be included in the bundle.
+            -->
+            <Export-Package>
+              com.sap.mobile.platform.server.sample.persistence.jpa.logic.api
+            </Export-Package>
+            <Private-Package>
+              com.sap.mobile.platform.server.sample.persistence.jpa.logic
+            </Private-Package>
+            <!--
+             | Note: If you use other only referenced from spring context then include them in the Import-Package
+              instruction here.  The * instruction will ensure any directly imported packages in supporting classes are
+              include automatically, but Spring context referenced ones need explicit reference.
+            -->
+            <Import-Package> 
+              com.sap.mobile.platform.server.sample.persistence.jpa.dao.api,
+              com.sap.mobile.platform.server.sample.persistence.jpa.model,
+              javax.annotation, 
+              org.slf4j, 
+              org.springframework.beans.factory,
+              *
+            </Import-Package>
+            <!--
+             | Each module can override these defaults in an optional osgi.bnd file
+            -->
+            <_include>-osgi.bnd</_include>
+            <ARF-Bundle-Template>/META-INF/config</ARF-Bundle-Template>
+          </instructions>
+          <!-- Generate a local repository.xml for the artifact to enable obr testing -->
+          <obrRepository>NONE</obrRepository>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </build>
+  <dependencies>
+
+    <dependency>
+      <groupId>com.sap.mobile.platform.server.sample</groupId>
+      <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.model</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sap.mobile.platform.server.sample</groupId>
+      <artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.dao-api</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>javax.persistence</artifactId>
+      <version>${javax-persistence.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <artifactId>org.springframework.context</artifactId>
+      <groupId>org.springframework</groupId> 
+    </dependency>
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>com.springsource.slf4j.api</artifactId>
+    </dependency>
+
+  </dependencies>
+
+</project>

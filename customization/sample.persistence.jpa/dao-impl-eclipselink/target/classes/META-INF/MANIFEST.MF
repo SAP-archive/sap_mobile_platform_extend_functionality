@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1433125871206
+Build-Jdk: 1.7.0_25
+Built-By: I066721
+Bundle-Category: event
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Mobile Platform :: Server Samples :: Persistence - JPA 
+ - EclipseLink DAOs
+Bundle-SymbolicName: com.sap.mobile.platform.server.sample.customization
+ .persistence.jpa.dao-impl-eclipselink
+Bundle-Version: 130.8.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: com.sap.mobile.platform.server.sample.persistence.jpa.da
+ o.api;version="[130.8,131)",com.sap.mobile.platform.server.sample.persi
+ stence.jpa.model;version="[130.8,131)",javax.annotation,javax.persisten
+ ce;version="[2.0,3)",javax.persistence.spi;version="[2.0,3)",javax.sql,
+ org.osgi.framework;version="[1.6,2)",org.slf4j;version="[1.6,2)"
+Tool: Bnd-1.50.0

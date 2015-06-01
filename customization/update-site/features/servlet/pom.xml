@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+	<groupId>com.sap.mobile.platform.server.sample</groupId>
+	<artifactId>com.sap.mobile.platform.server.sample.customization.parent</artifactId>
+    <version>130.8.0-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>com.sap.mobile.platform.server.sample</groupId>
+  <artifactId>com.sap.mobile.platform.server.sample.customization.dispatcher.servlet.feature</artifactId>
+  <packaging>eclipse-feature</packaging>
+  <name>SAP Mobile Platform :: Server Samples :: Dispatcher Servlet - Sample Servlet - Eclipse P2 Feature</name>
+
+  <profiles>
+    <profile>
+      <id>metadata.quality.check.safe</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <repositories>
+        <repository>
+          <id>LJS</id>
+          <layout>p2</layout>
+          <url>${repository.javaweb}</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${version.tycho}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${version.tycho}</version>
+        <configuration>
+          <resolver>p2</resolver>
+          <pomDependencies>consider</pomDependencies>
+          <ignoreTychoRepositories>true</ignoreTychoRepositories>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-packaging-plugin</artifactId>
+        <version>${version.tycho}</version>
+        <configuration>
+          <archiveSite>true</archiveSite>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <dependencies> 
+    <dependency>
+		<groupId>com.sap.mobile.platform.server.sample</groupId>
+		<artifactId>com.sap.mobile.platform.server.sample.customization.dispatcher.sampleservlet</artifactId>	
+		<version>${version.smp3-samples.projects}</version>
+    </dependency>
+    <!-- Other dependencies for Tycho OSGi wiring will be derived from the server base project since it is the parent of this feature -->
+  </dependencies>
+
+</project>

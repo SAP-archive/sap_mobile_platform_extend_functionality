@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='201506010231.Default' version='1.0.0.EEF8--cJLmK37UEMsEz0EMEUcM'>
+    <properties size='3'>
+      <property name='org.eclipse.equinox.p2.name' value='Uncategorized'/>
+      <property name='org.eclipse.equinox.p2.description' value='Default category for otherwise uncategorized features'/>
+      <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='201506010231.Default' version='1.0.0.EEF8--cJLmK37UEMsEz0EMEUcM'/>
+    </provides>
+    <requires size='4'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature.feature.group' range='[130.8.0.201506010231,130.8.0.201506010231]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.dispatcher.servlet.feature.feature.group' range='[130.8.0.201506010231,130.8.0.201506010231]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.properties.feature.feature.group' range='[130.8.0.201506010231,130.8.0.201506010231]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.sap.mobile.platform.server.sample.customization.persistence.jpa.feature.feature.group' range='[130.8.0.201506010231,130.8.0.201506010231]'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+</units>

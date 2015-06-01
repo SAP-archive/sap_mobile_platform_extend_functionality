@@ -1,0 +1,5 @@
+{ 
+"Config files" : [{"source":"test.cfg"}],
+"Apply strategy" : "config admin",
+"Affected bundles" : ["com.sap.mobile.platform.server.sample.properties"]  
+}

@@ -1,0 +1,4 @@
+com\sap\mobile\platform\server\sample\persistence\jpa\model\SequencedEntity.class
+com\sap\mobile\platform\server\sample\persistence\jpa\model\Department.class
+com\sap\mobile\platform\server\sample\persistence\jpa\log\CustomSessionLog.class
+com\sap\mobile\platform\server\sample\persistence\jpa\model\Employee.class

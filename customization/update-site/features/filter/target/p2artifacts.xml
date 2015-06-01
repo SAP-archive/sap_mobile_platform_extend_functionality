@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='org.eclipse.update.feature' id='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature' version='130.8.0.201506010231'>
+    <properties size='6'>
+      <property name='artifact.size' value='3683'/>
+      <property name='download.size' value='3683'/>
+      <property name='maven-groupId' value='com.sap.mobile.platform.server.sample'/>
+      <property name='maven-artifactId' value='com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature'/>
+      <property name='maven-version' value='130.8.0-SNAPSHOT'/>
+      <property name='download.contentType' value='application/zip'/>
+    </properties>
+  </artifact>
+</artifacts>

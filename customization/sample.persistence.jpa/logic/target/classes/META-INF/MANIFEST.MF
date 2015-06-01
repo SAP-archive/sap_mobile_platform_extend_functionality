@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+ARF-Bundle-Template: /META-INF/config
+Bnd-LastModified: 1433125871915
+Build-Jdk: 1.7.0_25
+Built-By: I066721
+Bundle-Category: event
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Mobile Platform :: Server Samples :: Persistence - JPA 
+ - Logic Service
+Bundle-SymbolicName: com.sap.mobile.platform.server.sample.customization
+ .persistence.jpa.logic
+Bundle-Version: 130.8.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.sap.mobile.platform.server.sample.persistence.jpa.lo
+ gic.api;uses:="com.sap.mobile.platform.server.sample.persistence.jpa.mo
+ del";version="130.8.0.SNAPSHOT"
+Import-Package: com.sap.mobile.platform.server.sample.persistence.jpa.da
+ o.api;version="[130.8,131)",com.sap.mobile.platform.server.sample.persi
+ stence.jpa.logic.api,com.sap.mobile.platform.server.sample.persistence.
+ jpa.model;version="[130.8,131)",javax.annotation,org.slf4j;version="[1.
+ 6,2)",org.springframework.beans.factory;version="[3.1,4)"
+Tool: Bnd-1.50.0

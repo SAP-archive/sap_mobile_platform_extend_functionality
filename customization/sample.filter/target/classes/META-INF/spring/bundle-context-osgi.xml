@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.eclipse.org/gemini/blueprint/schema/blueprint"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+      http://www.eclipse.org/gemini/blueprint/schema/blueprint http://www.eclipse.org/gemini/blueprint/schema/blueprint/gemini-blueprint-1.0.xsd">
+
+  <osgi:service ref="noauthfilter" interface="javax.servlet.Filter">
+    <osgi:service-properties>
+      <beans:entry key="url-patterns" value="/public/**" />
+      <beans:entry key="order" value="0" />
+    </osgi:service-properties>
+  </osgi:service>
+
+  <osgi:service ref="seccheck" interface="javax.servlet.Filter"> 
+    <osgi:service-properties> 
+      <beans:entry key="url-patterns" value="/**" /> 
+      <beans:entry key="header-patterns" value="passport:, x-smp-e2e: yes" /> 
+      <beans:entry key="order" value="5" /> 
+    </osgi:service-properties> 
+  </osgi:service> 
+
+  <osgi:service ref="noslash" interface="javax.servlet.Filter">
+    <osgi:service-properties>
+      <beans:entry key="url-patterns" value="/match" />
+      <beans:entry key="order" value="50" />
+    </osgi:service-properties>
+  </osgi:service>
+
+  <osgi:service ref="slash" interface="javax.servlet.Filter">
+    <osgi:service-properties>
+      <beans:entry key="url-patterns" value="/match/" />
+      <beans:entry key="order" value="51" />
+    </osgi:service-properties>
+  </osgi:service>
+
+  <osgi:service ref="slashstar" interface="javax.servlet.Filter">
+    <osgi:service-properties>
+      <beans:entry key="url-patterns" value="/match/*" />
+      <beans:entry key="order" value="52" />
+    </osgi:service-properties>
+  </osgi:service>
+	
+  <osgi:service ref="slashstarstar" interface="javax.servlet.Filter">
+    <osgi:service-properties>
+      <beans:entry key="url-patterns" value="/match/**" />
+      <beans:entry key="order" value="53" />
+    </osgi:service-properties>
+  </osgi:service>
+	
+</beans>

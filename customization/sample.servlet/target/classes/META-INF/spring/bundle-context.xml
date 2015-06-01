@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+  
+  <bean id="NoSlash" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+
+  <bean id="Slash" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+
+  <bean id="SlashStar" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+  
+  <!-- 
+  <bean id="SlashStar" class="com.sap.mobile.platform.server.SmpService">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+    <property name="serviceType" value="admin" />
+    <property name="urlPatterns" value="/SlashStar/*" />
+  </bean>
+ -->
+ 
+  <bean id="SlashStarStar" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+  
+  <bean id="Match" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+  
+  <bean id="MatchSlash" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+  
+  <bean id="MatchSlashStar" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+   
+  <bean id="MatchSlashStarStar" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+  
+    <bean id="PublicSlashStarStar" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <property name="supportedMethods">
+      <list>
+        <value>GET</value>
+      </list>
+    </property>
+    <property name="servletClass" value="com.sap.mobile.platform.server.dispatcher.sampleservlet.SampleServlet" />
+  </bean>
+   
+</beans>

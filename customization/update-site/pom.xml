@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+	<groupId>com.sap.mobile.platform.server.sample</groupId>
+	<artifactId>com.sap.mobile.platform.server.sample.customization.parent</artifactId>
+    <version>130.8.0-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>com.sap.mobile.platform.server.sample</groupId>
+  <artifactId>com.sap.mobile.platform.server.sample.p2</artifactId>
+  <packaging>pom</packaging>
+  <name>SAP Mobile Platform :: Server Samples :: Eclipse P2 Features and Repository for Samples</name>
+
+  <profiles>
+    <profile>
+      <id>metadata.quality.check.safe</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <repositories>
+        <repository>
+          <id>LJS</id>
+          <layout>p2</layout>
+          <url>${repository.javaweb}</url>
+        </repository>
+        <repository>
+          <id>JPAAS</id>
+          <layout>p2</layout>
+          <url>${repository.jpaas}</url>
+        </repository>
+        <repository>
+          <id>PERSISTENCE</id>
+          <layout>p2</layout>
+          <url>${repository.persistence}</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  <modules>
+	<module>features/filter</module>	
+	<module>features/servlet</module>
+    <module>features/properties</module>
+    <module>features/persistence.jpa</module>	
+    <module>repository</module>
+  </modules>
+	
+</project>

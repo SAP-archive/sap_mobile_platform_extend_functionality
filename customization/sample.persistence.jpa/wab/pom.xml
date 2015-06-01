@@ -1,0 +1,130 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sap.mobile.platform.server.sample</groupId>
+		<artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa</artifactId>
+		<version>130.8.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.sap.mobile.platform.server.sample</groupId>
+	<artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.wab</artifactId>
+	<packaging>bundle</packaging>
+	<name>SAP Mobile Platform :: Server Samples :: Persistence - JPA - WAB Tester</name>
+
+	<properties>
+		<javax-persistence.version>2.0.4.v201112161009</javax-persistence.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Category>sample</Bundle-Category>
+						<Export-Package>
+						</Export-Package>
+						<Private-Package>
+							com.sap.mobile.platform.server.sample.persistence.jpa.servlet,
+							com.sap.mobile.platform.server.sample.persistence.jpa.servlet.context
+						</Private-Package>
+						<Import-Package>
+							com.sap.mobile.platform.server.sample.persistence.jpa.logic.api,
+							com.sap.mobile.platform.server.sample.persistence.jpa.model,
+							!org.osgi.service.blueprint,
+							javax.servlet;version="[3.0.0,4)",
+							javax.servlet.http;version="[3.0.0,4)",
+							*
+						</Import-Package>
+						<_wab>src/main/webapp</_wab>
+						<Web-ContextPath>${project.artifactId}</Web-ContextPath>
+						<Spring-Context>OSGI-INF/blueprint/context.xml</Spring-Context>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sap.mobile.platform.server.sample</groupId>
+			<artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.logic</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.mobile.platform.server.sample</groupId>
+			<artifactId>com.sap.mobile.platform.server.sample.customization.persistence.jpa.model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- equinox -->
+		<dependency>
+			<groupId>org.eclipse</groupId>
+			<artifactId>org.eclipse.osgi</artifactId>			
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.core</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>org.springframework.beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>org.springframework.context</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>org.springframework.context.support</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>org.springframework.core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>org.springframework.aop</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.osgi</groupId>
+					<artifactId>org.eclipse.osgi.services</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.aopalliance</groupId>
+					<artifactId>com.springsource.org.aopalliance</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.commons</groupId>
+					<artifactId>com.springsource.org.apache.commons.logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<artifactId>org.springframework.context</artifactId>
+			<groupId>org.springframework</groupId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>com.springsource.javax.servlet</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>javax.persistence</artifactId>
+			<version>${javax-persistence.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+</project>

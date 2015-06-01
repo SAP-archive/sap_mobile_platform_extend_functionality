@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+  xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+  <persistence-unit
+    name="com.sap.mobile.platform.server.sample.persistence.jpa.pu"
+    transaction-type="RESOURCE_LOCAL">
+
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+    <class>com.sap.mobile.platform.server.sample.persistence.jpa.model.Department</class>
+    <class>com.sap.mobile.platform.server.sample.persistence.jpa.model.Employee</class>
+
+    <shared-cache-mode>NONE</shared-cache-mode>
+
+    <properties>
+      <!--property name="eclipselink.logging.logger"
+        value="com.sap.mobile.platform.server.sample.persistence.jpa.log.CustomSessionLog" /-->
+ 
+      <property name="eclipselink.weaving" value="static" />
+      <property name="eclipselink.cache.type.default" value="NONE" />
+      <property name="eclipselink.cache.shared" value="false" />
+      <property name="eclipselink.query-results-cache" value="false" />
+      <!-- To have eclipselink create the database schema automatically -->
+      <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+      <!-- Set value to 'sql-script', 'database' or 'both' -->
+      <property name="eclipselink.ddl-generation.output-mode"  value="database" />
+    </properties>
+
+  </persistence-unit>
+
+</persistence>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+   <description name="SAP Mobile Platform :: Server Samples :: Eclipse P2 Update Site">
+   </description>
+
+   <feature url="features/com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature_130.8.0.qualifier.jar" id="com.sap.mobile.platform.server.sample.customization.dispatcher.filter.feature" version="130.8.0.qualifier">
+      <category name="com.sap.mobile.platform.server.sample"/>
+   </feature>
+      
+   <feature url="features/com.sap.mobile.platform.server.sample.customization.dispatcher.servlet.feature_130.8.0.qualifier.jar" id="com.sap.mobile.platform.server.sample.customization.dispatcher.servlet.feature" version="130.8.0.qualifier">
+      <category name="com.sap.mobile.platform.server.sample"/>
+   </feature>
+   
+   <feature url="features/com.sap.mobile.platform.server.sample.customization.properties.feature_130.8.0.qualifier.jar" id="com.sap.mobile.platform.server.sample.customization.properties.feature" version="130.8.0.qualifier">
+      <category name="com.sap.mobile.platform.server.sample"/>
+   </feature>
+   
+   <feature url="features/com.sap.mobile.platform.server.sample.customization.persistence.jpa.feature_130.8.0.qualifier.jar" id="com.sap.mobile.platform.server.sample.customization.persistence.jpa.feature" version="130.8.0.qualifier">
+      <category name="com.sap.mobile.platform.server.sample"/>
+   </feature>
+
+   <category-def name="com.sap.mobile.platform.server.sample.customization" label="SAP Mobile Platform :: Server Sample :: P2 Repository"/>
+
+</site>

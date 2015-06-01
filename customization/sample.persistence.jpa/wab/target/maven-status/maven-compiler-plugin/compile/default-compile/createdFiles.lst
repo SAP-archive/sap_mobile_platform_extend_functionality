@@ -1,0 +1,3 @@
+com\sap\mobile\platform\server\sample\persistence\jpa\servlet\context\BlueprintAdapter.class
+com\sap\mobile\platform\server\sample\persistence\jpa\servlet\TestServlet.class
+com\sap\mobile\platform\server\sample\persistence\jpa\servlet\context\BlueprintAware.class

@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1433125872552
+Build-Jdk: 1.7.0_25
+Built-By: I066721
+Bundle-Category: sample
+Bundle-ClassPath: WEB-INF/classes
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Mobile Platform :: Server Samples :: Persistence - JPA 
+ - WAB Tester
+Bundle-SymbolicName: com.sap.mobile.platform.server.sample.customization
+ .persistence.jpa.wab
+Bundle-Version: 130.8.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Ignore-Package: org.osgi.service.blueprint
+Import-Package: com.sap.mobile.platform.server.sample.persistence.jpa.lo
+ gic.api;version="[130.8,131)",com.sap.mobile.platform.server.sample.per
+ sistence.jpa.model;version="[130.8,131)",javax.servlet;version="[3.0.0,
+ 4)",javax.servlet.http;version="[3.0.0,4)",org.eclipse.gemini.blueprint
+ .context;version="[1.0,2)",org.osgi.framework;version="[1.7,2)",org.spr
+ ingframework.context;version="[3.1,4)"
+Import-Service: com.sap.mobile.platform.server.sample.persistence.jpa.lo
+ gic.api.IMyCompanyLogic;multiple:=false
+Spring-Context: OSGI-INF/blueprint/context.xml
+Tool: Bnd-1.50.0
+Web-ContextPath: com.sap.mobile.platform.server.sample.customization.per
+ sistence.jpa.wab

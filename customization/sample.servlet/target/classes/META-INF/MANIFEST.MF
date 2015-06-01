@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1433125805362
+Build-Jdk: 1.7.0_25
+Built-By: I066721
+Bundle-Category: sample
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Mobile Platform :: Server Samples :: Dispatcher Servlet
+  Sample
+Bundle-SymbolicName: com.sap.mobile.platform.server.sample.customization
+ .dispatcher.sampleservlet
+Bundle-Version: 130.8.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: javax.servlet;version="[2.4.0,3.0.0]",javax.servlet.http
+ ;version="[2.4.0,3.0.0]",javax.servlet.resources;version="[2.4.0,3.0.0]
+ ",org.springframework.web.servlet;version="[3.1,4)",org.springframework
+ .web.servlet.mvc;version="[3.1,4)"
+Tool: Bnd-1.50.0
