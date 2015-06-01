@@ -1,6 +1,9 @@
 ﻿Readme of How to use SMP3 sample code. 
 SCN: http://scn.sap.com/docs/DOC-61703
 
+The developer from the customer may want to be able to build server extensions based on sample code receive from SAP. This code must run out of the box w/o any dependencies on SAP internal build infrastructure.The code include 4 samples, Dispatcher Integration (Servlet / Controller / Filter),Persistence Integration, Properties/ConfigAdmin Integration, and P2 artifacts.
+
+Steps:
 1. Download sample source code 
 			https://github.com/SAP/sap_mobile_platform_extend_functionality        
 2. Prerequisites
