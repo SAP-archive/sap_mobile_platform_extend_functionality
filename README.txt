@@ -12,7 +12,7 @@ Steps:
             Spring OSGI Bundle Repository, e.g. http://repository.opencastproject.org/nexus/content/repositories/public/
             P2 unzip repository e.g. http://download.eclipse.org/virgo/updatesite/3.6.2.RELEASE/
             
-2.2 SMP3 installed
+2.2 SMP3 installed(tested in SMP 3.0.5)
             Customer can uploaded dependencies to their repository incase missing maven artifacts.
             
             Usage: java -jar bundles/com.sybase365.mobiliser.dist.tools.jar
