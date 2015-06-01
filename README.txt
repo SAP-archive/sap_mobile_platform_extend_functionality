@@ -1,8 +1,8 @@
 ﻿Readme of How to use SMP3 sample code. 
- 
-1. Download sample source code from nexus then unzip to your work folder.
-            Latest source code address: http://nexus.wdf.sap.corp:8081/nexus/content/groups/build.snapshots/com/sap/mobile/platform/server/sample/com.sap.mobile.platform.server.sample.customization/<version>/com.sap.mobile.platform.server.sample.customization-<version>-distribution.zip        
-            e.g. http://nexus.wdf.sap.corp:8081/nexus/content/groups/build.snapshots/com/sap/mobile/platform/server/sample/com.sap.mobile.platform.server.sample.customization/130.8.0-SNAPSHOT/com.sap.mobile.platform.server.sample.customization-130.7.0-20150128.015756-26-distribution.zip
+SCN link: http://scn.sap.com/docs/DOC-61703
+
+1. Download sample source code 
+			https://github.com/SAP/sap_mobile_platform_extend_functionality
             
 2. Prerequisites
             2.1 maven/maven repository, customer should have their own repositories. 
